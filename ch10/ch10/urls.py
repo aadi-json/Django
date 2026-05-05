@@ -1,5 +1,5 @@
 """
-URL configuration for ch9 project.
+URL configuration for ch10 project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.2/topics/http/urls/
@@ -19,5 +19,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('course/', include('course.urls'))
+    path('course/',include('course.urls'))
 ]
