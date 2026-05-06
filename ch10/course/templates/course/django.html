@@ -43,7 +43,7 @@
         {% comment %} <h2>{{date | date:'SHORT_DATE_FORMAT'}}</h2>
         <H2>{{date | time:'TIME_FORMAT'}}</H2> {% endcomment %}
   
-        <h1>without filter</h1>
+        {% comment %} <h1>without filter</h1>
         <h2>{{f1}}</h2>
         <h2>{{f2}}</h2>
         <h2>{{f3}}</h2>
@@ -56,7 +56,74 @@
         <h1>with arguments</h1>
         <h2>{{f1 | floatformat:3}}</h2>
         <h2>{{f2 | floatformat:3}}</h2>
-        <h2>{{f3 | floatformat:3}}</h2>
+        <h2>{{f3 | floatformat:3}}</h2> {% endcomment %}
+
+          {% comment %} {% if status == "Online" %}
+          <h3>User is online</h3>
+          {% else %}
+          <h3>User is offline</h3>
+          {% endif %} {% endcomment %}
+
+          {% comment %} {% if status == "Online" and Name %}
+          <h2>Haa successful</h2>
+          {% endif %} {% endcomment %}
+
+          {% comment %} {% if Name|length >= 3 %}
+          <h1>{{Name}}</h1>
+          {% endif %} {% endcomment %}
+          
+          {% comment %} <h3>For loop</h3>
+          <ul>
+            {% for name in Name  %}
+            <li>
+              {{name}}
+            </li>
+            {% endfor %}
+          </ul>
+
+          <h3>For loop</h3>
+          <ul>
+            {% for name in Name  reversed%}
+            <li>
+              {{name}}
+            </li>
+            {% endfor %}
+          </ul> {% endcomment %}
+        
+          {% comment %} <h3>For loop</h3>
+          <ul>
+            {% for name in Name  %}
+            <li>
+              {{name}}
+            </li>
+            {% empty %}
+            <h2>Names are not avaible</h2>
+            {% endfor %}
+          </ul> {% endcomment %}
+
+          {% comment %} <h1>for loop with counter tag</h1>
+          {% for name in Name  %}
+          {{forloop.counter}} {{name}} <br>
+          {% endfor %} {% endcomment %}
+
+          {% comment %} <h2>Student Dictionary</h2>
+          <h3>{{student}}</h3>
+          <h3>{{student.stu1}}</h3>
+          <h3>{{student.stu1.name}}</h3>
+          <h3>{{student.stu1.roll}}</h3> {% endcomment %}
+
+         {% comment %} {% for key, stu in student.items  %}
+         {% if stu.name == 'Rahul' %}
+         <h1>Student name is : {{stu.name}} and his/her roll no is : {{stu.roll}}</h1>
+         {% endif %}
+         {% endfor %} {% endcomment %}
+
+         {% comment %} {% for key, value in student.items  %}
+         <h3>{{key}} - {{value}}</h3>
+         {% for key2, value2 in value.items %}
+         <h2>{{key2}} - {{value2}}</h2>
+         {% endfor %}
+         {% endfor %} {% endcomment %}
 
 </body>
 </html>
