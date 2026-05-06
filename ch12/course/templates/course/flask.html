@@ -1,0 +1,13 @@
+{% extends "core/base.html" %}
+
+{% block title %}
+Flask
+{% endblock title %}
+
+{% block header %}This is header{% endblock header %}
+
+{% block content %}
+<h1>This is Flask page</h1>
+{% endblock content %}
+
+{% block footer %} {{block.super}} This is flask footer{% endblock footer %}
