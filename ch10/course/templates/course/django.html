@@ -11,7 +11,7 @@
         <h1>the duration of the course is {{duration}}</h1>
         <h1>the seats of the course is {{seats}}</h1> {% endcomment %}
   
-        <h1>Hey You</h1>
+        {% comment %} <h1>Hey You</h1>
         <h3>
           Name:{{Name | upper}}
         </h3>
@@ -22,7 +22,41 @@
         <h3>Name: {{Name| default:"Word is not avaible"}}</h3>
         <h3>Name: {{Name| slice:"2"}}</h3>
         <h3>Name:{{Name | length}}</h3>
-        <h3>Name: {{Name| truncatechars:3}}</h3>
+        <h3>Name: {{Name| truncatechars:3}}</h3> {% endcomment %}
+
+        {% comment %} <h2>
+          Datetime: {{date}}
+        </h2>
+
+        <h2>
+          Datetime: {{date | date:"D d M Y"}}
+        </h2>
+        
+        <h2>
+          Datetime: {{date | date:"d M Y h"}}
+        </h2>
+
+        <h2>
+          Datetime: {{date | date:"h:m:s"}}
+        </h2> {% endcomment %}
+
+        {% comment %} <h2>{{date | date:'SHORT_DATE_FORMAT'}}</h2>
+        <H2>{{date | time:'TIME_FORMAT'}}</H2> {% endcomment %}
+  
+        <h1>without filter</h1>
+        <h2>{{f1}}</h2>
+        <h2>{{f2}}</h2>
+        <h2>{{f3}}</h2>
+
+        <h1>with filter</h1>
+        <h2>{{f1 | floatformat}}</h2>
+        <h2>{{f2 | floatformat}}</h2>
+        <h2>{{f3 | floatformat}}</h2>
+
+        <h1>with arguments</h1>
+        <h2>{{f1 | floatformat:3}}</h2>
+        <h2>{{f2 | floatformat:3}}</h2>
+        <h2>{{f3 | floatformat:3}}</h2>
 
 </body>
 </html>
