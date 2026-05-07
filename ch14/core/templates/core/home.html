@@ -1,0 +1,26 @@
+{% extends "core/base.html" %}
+
+
+{% block title %}
+home page
+{% endblock title %}
+
+{% block header %}This is header{% endblock header %}
+
+
+{% block content %}
+<h1>This is home page</h1>
+{% comment %} <button type="button" class="btn btn-primary">Primary</button>
+<button type="button" class="btn btn-secondary">Secondary</button>
+<button type="button" class="btn btn-success">Success</button>
+<button type="button" class="btn btn-danger">Danger</button>
+<button type="button" class="btn btn-warning">Warning</button>
+<button type="button" class="btn btn-info">Info</button>
+<button type="button" class="btn btn-light">Light</button>
+<button type="button" class="btn btn-dark">Dark</button>
+
+<button type="button" class="btn btn-link">Link</button> {% endcomment %}
+{% endblock content %}
+
+
+{% block footer %} {{block.super}} This is home brfooter{% endblock footer %}
