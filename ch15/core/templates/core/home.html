@@ -1,0 +1,27 @@
+{% extends "core/base.html" %}
+{% load django_bootstrap5 %}
+
+
+{% block title %}
+home page
+{% endblock title %}
+
+{% block universalcss %}
+{% bootstrap_css %}
+{{block.super}}
+{% bootstrap_javascript %}
+{% endblock universalcss %}
+
+{% block header %}This is header{% endblock header %}
+
+
+{% block content %}
+<h1>This is home page</h1>
+
+{% bootstrap_button button_type="submit" content="OK" %}
+{% bootstrap_button button_type="reset" content="Cancel" %}
+
+{% endblock content %}
+
+
+{% block footer %} {{block.super}} This is home brfooter{% endblock footer %}
