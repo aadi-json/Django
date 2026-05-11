@@ -1,0 +1,15 @@
+{% extends "core/base.html" %}
+
+
+{% block title %}
+home page
+{% endblock title %}
+
+{% block header %}This is header{% endblock header %}
+
+
+{% block content %}
+<h1>This is home page</h1>
+{% endblock content %}
+
+{% block footer %} {{block.super}} This is home brfooter{% endblock footer %}
